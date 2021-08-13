@@ -104,3 +104,16 @@ executable nft-market-pab
     freer-extras -any,
     plutus-ledger -any,
     stm -any,
+
+executable create-build
+  main-is: Build.hs
+  hs-source-dirs: app
+  ghc-options:  -threaded
+  build-depends:        
+    aeson, 
+    cardano-api, 
+    cardano-ledger-alonzo,
+    nft-market -any,
+    plutus-ledger-api,
+    plutus-tx,
+    bytestring
